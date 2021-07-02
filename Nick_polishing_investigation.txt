@@ -1,0 +1,56 @@
+﻿Polishing is a key part of assembly accuracy. 
+
+
+Currently we have a pipeline that assesses 5 assemblers, of those 3 are pretty decent. 
+Flye, Raven and Unicycler. 
+
+
+We have WGA data for 10 strains, this is unreasonable to expect users to have but is it helpful in polishing.
+
+
+The native data is of variable quality 
+
+
+Polishes include Racon, Pilon, Medaka 
+
+
+Typically polishing approaches use a combination of these, and a combination of short and long reads. 
+
+
+We currently use Racon x 4 (Long reads) , Pilon (Short reads) , Racon (short reads) 
+There are other options out there. 
+We are also testing Racon x 4 + Medaka and Racon x4 + Medaka + Pilon 
+
+
+We can assess assembly quality from polishing using Short ORFs and Breseq pipeline for Deletion and SNPs (using Illumina reads) 
+
+
+
+
+Things we want to know: 
+
+
+Do novel reads improve polishing? (ie reads not used for the assembly) 
+How many rounds of Racon are actually needed? 
+Does the quality of Nanopore reads significantly affect polishing? 
+Does the quality of Illumina reads significantly affect polishing? 
+Does WGA data help polishing?
+Is there an optimal polishing pipeline? 
+Is there an optimal polishing/assembler combination?  
+
+
+
+
+How do I see you doing this? 
+
+
+We have an assembly pipeline, you could use as a starting point and build branches into this that will take the assemblies at various parts of the polishing pipeline and run metrics on them. 
+
+
+First steps! 
+
+
+Take a look at the snakemake as it already is and the tools/assemblers used
+
+
+Have a think about different polishing options / Pipeline options that will answer some of the questions above
