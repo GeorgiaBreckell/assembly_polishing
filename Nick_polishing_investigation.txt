@@ -38,7 +38,7 @@ Does WGA data help polishing?
 Is there an optimal polishing pipeline? 
 Is there an optimal polishing/assembler combination?  
 
-
+Adding some ideas about canu, n ot being polished with long reads 
 
 
 How do I see you doing this? 
